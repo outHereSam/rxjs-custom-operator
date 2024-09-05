@@ -13,7 +13,8 @@ import { AsyncPipe } from '@angular/common';
 })
 export class AppComponent {
   title = 'rxjs-operator';
-  source$: Observable<number | string> = from([1, 2, 3, 'star', 'fruit']);
+  initialData = [1, 2, 3, 'star', 'fruit'];
+  source$: Observable<number | string> = from(this.initialData);
   data: (number | string)[] = [];
 
   ngOnInit() {

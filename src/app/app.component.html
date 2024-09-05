@@ -1,3 +1,12 @@
 <div class="container">
-  <p>Observable: {{ data }}</p>
+  <h4>Initial Data:</h4>
+  @for(item of initialData; track $index) {
+  <p>{{ item }}</p>
+  }
+
+  <h4>Transformed Data:</h4>
+  @for (transformedItem of data; track $index) {
+
+  <p>{{ transformedItem }}</p>
+  }
 </div>
